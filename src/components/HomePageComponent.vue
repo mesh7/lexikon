@@ -1,5 +1,5 @@
 <template>
-  <div class="homePage">HomePageComponent</div>
+  <div class="homePage">Ishaan Shambharkar</div>
 </template>
 
 <script>
