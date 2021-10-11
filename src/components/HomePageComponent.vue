@@ -1,8 +1,20 @@
 <template>
-  <div class="homePage">Ishaan Shambharkar</div>
+  <div>
+    <div class="homePage">Lexicon</div>
+    <div class="footer">
+      <div class="footer__item" @click="redirect('contact')">
+        <u>Contact</u>
+      </div>
+      <div class="footer__item" @click="redirect('support')">
+        <u>Support</u>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import './HomePageComponent.scss';
+
 export default {
   name: 'HomePageComponent',
   props: {
