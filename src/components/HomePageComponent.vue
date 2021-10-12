@@ -20,6 +20,15 @@ export default {
   props: {
     msg: String,
   },
+  methods: {
+    redirect(navigateTo) {
+      if (navigateTo === "contact") {
+        window.location.href = "https://twitter.com/shubhammesh7";
+      } else if (navigateTo === "support") {
+        window.location.href = "https://github.com/mesh7";
+      }
+    }
+  }
 };
 </script>
 
