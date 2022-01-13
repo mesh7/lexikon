@@ -1,6 +1,6 @@
 const footer = {
-    contactText: "",
-    contactLink: ""
-}
+  contactText: '',
+  contactLink: '',
+};
 
 export default footer;

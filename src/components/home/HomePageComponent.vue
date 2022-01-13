@@ -1,19 +1,13 @@
 <template>
   <div class="home-component">
-    <!-- <div class="dots">
-      <span class="dot__one"> </span>
-      <span class="dot__two"> </span>
-      <span class="dot__three"> </span>
-    </div> -->
-
     <div class="content">
       <img class="logo" alt="morseo-logo" src="./logo.svg" />
       <div class="main-title">
         <p class="main-title__one">
-          You might have heard about the morse code, but do you know it
+          minimal dictionary
         </p>
-        <p class="main-title__one">Learn morse code with Morseo.</p>
       </div>
+      <input type="text" placeholder="Search..">
 
       <button class="get-started-button" @click="getStarted()">
         <div class="get-started-button__text">Get Started</div>
@@ -35,50 +29,48 @@
 </template>
 
 <script>
-import "./HomePageComponent.scss";
+import './HomePageComponent.scss';
 
 export default {
-  name: "HomePageComponent",
+  name: 'HomePageComponent',
   methods: {
     created() {},
 
     getStarted() {
-      console.log("hello");
+      const output = document.getElementById('output');
+      const pressed = {};
 
-      var output = document.getElementById("output"),
-        pressed = {};
-
-      //for knowing which key is pressed
+      // for knowing which key is pressed
       window.onkeydown = function (event) {
         if (pressed[event.which]) return;
         pressed[event.which] = event.timeStamp;
       };
 
-      //for knowing how long the key is pressed
+      // for knowing how long the key is pressed
       window.onkeyup = function (event) {
         if (!pressed[event.which]) return;
-        var duration = (event.timeStamp - pressed[event.which]) / 1000;
-        output.innerHTML +=
-          "<p>Key " +
-          event.which +
-          " was pressed for " +
-          duration +
-          " seconds</p>";
+        const duration = (event.timeStamp - pressed[event.which]) / 1000;
+        output.innerHTML
+          += `<p>Key ${
+            event.which
+          } was pressed for ${
+            duration
+          } seconds</p>`;
         pressed[event.which] = 0;
       };
     },
 
-    //rediting the footer links
+    // rediting the footer links
     redirect(navigateTo) {
-      if (navigateTo === "contact") {
-        window.location.href = "https://twitter.com/shubhammesh7";
-      } else if (navigateTo === "support") {
-        window.location.href = "https://github.com/mesh7";
+      if (navigateTo === 'contact') {
+        window.location.href = 'https://twitter.com/shubhammesh7';
+      } else if (navigateTo === 'support') {
+        window.location.href = 'https://github.com/mesh7';
       }
     },
     validation() {},
     audio() {
-      var spaceKeyAudio = new Audio("");
+      const spaceKeyAudio = new Audio('');
       spaceKeyAudio.play();
     },
   },

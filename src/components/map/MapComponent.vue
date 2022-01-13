@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import "./MapComponent.scss";
+import './MapComponent.scss';
 
 export default {
-  name: "MapComponent",
+  name: 'MapComponent',
 };
 </script>
 

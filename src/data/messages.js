@@ -1,7 +1,7 @@
 const messages = {
-    slowMessage: "",
-    fastMessage: "",
-    
-}
+  slowMessage: '',
+  fastMessage: '',
+
+};
 
 export default messages;

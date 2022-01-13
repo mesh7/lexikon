@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import HomePageComponent from "./components/home/HomePageComponent.vue";
+import HomePageComponent from './components/home/HomePageComponent.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     HomePageComponent,
   },
@@ -19,7 +19,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .body {
-  background: #1c5eac;
+  background: #fffff;
   margin: 0;
 }
 
