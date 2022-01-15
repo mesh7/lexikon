@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app {
+    width: 100vh;
+    min-height: 100vh;
+    background: #f3f3f3;
+    color: #15202b;
+}
+
+.dark {
+    background: #192734;
+    color: #f3f3f3;
+}
