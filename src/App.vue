@@ -1,24 +1,24 @@
 <template>
-  <div id="app" class="app" :class="mode">
-  <h1> Hello World! </h1>
+  <div id="app" class="app">
+  <h1> Hello World!</h1>
     <HomePageComponent />
   </div>
 </template>
 
-<script>
-// import HomePageComponent from './components/home/HomePageComponent.vue';
+<script lang="ts">
+import HomePageComponent from './components/home/HomePageComponent.vue';
 import './App.scss';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      mode: 'dark',
-    };
-  },
-  // components: {
-  //   HomePageComponent,
+  // data() {
+  //   return {
+  //     mode: 'dark',
+  //   };
   // },
+  components: {
+    HomePageComponent,
+  },
 };
 </script>
 
