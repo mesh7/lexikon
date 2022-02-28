@@ -1,11 +1,13 @@
 <template>
   <div id="app" class="app">
   <h1> Hello World!</h1>
-    <HomePageComponent />
+    <HeaderComponent/>
+    <HomePageComponent/>
   </div>
 </template>
 
 <script lang="ts">
+import HeaderComponent from './components/header/HeaderComponent.vue';
 import HomePageComponent from './components/home/HomePageComponent.vue';
 import './App.scss';
 
@@ -17,6 +19,7 @@ export default {
   //   };
   // },
   components: {
+    HeaderComponent,
     HomePageComponent,
   },
 };
