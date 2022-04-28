@@ -13,11 +13,11 @@ import './App.scss';
 
 export default {
   name: 'App',
-  // data() {
-  //   return {
-  //     mode: 'dark',
-  //   };
-  // },
+  data() {
+    return {
+      mode: 'dark',
+    };
+  },
   components: {
     HeaderComponent,
     HomePageComponent,

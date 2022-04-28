@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
-  <p>
-  HomePageComponent
+    <p>
+      HomePageComponent
     </p>
   </div>
 </template>
