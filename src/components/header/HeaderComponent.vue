@@ -11,12 +11,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
 import './HeaderComponent.scss';
 
-@Component
-export default class HeaderComponent extends Vue {
-}
+export default {
+  name: 'HeaderComponent',
+};
 </script>
 
 <style scoped lang="scss">
