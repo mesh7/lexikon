@@ -1,4 +1,12 @@
-# lexikon
+# Lexikon
+
+#### A clean online dictionary
+
+Do you want learn meaning of English words and tired of all the clutered dictionary websites? Solution is here!
+
+Lexicon allows you to search word meanings and show the all the information about the word in the most elegant way.
+
+https://lexicon.netlify.com/
 
 ## Project setup
 ```
@@ -9,16 +17,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
