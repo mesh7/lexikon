@@ -35,19 +35,33 @@
     <main class="container">
         <header>
             <div class="header">
-                <div class="logo-image"><img class="hero-image" alt="keyinfo-logo" src="resources/logo.svg" /></div>
+                <div class="logo-image"><img class="hero-image" alt="lexicon-logo" src="resources/logo.png" /></div>
                 <div class="header-title">LEXIKON</div>
             </div>
         </header>
-        <section class="card-content">
-            <div class="search">
-                <p class="search-word"> Hello </p>
-                <button class="search-word-sound">
-                    <div class="sound-icon"></div>
-                    <div class="sound-text">Sound</div>
-                </button>
-            </div>
-        </section>
+
+        <body>
+            <section class="container">
+                <div class="search-section">
+                    <!-- Input area -->
+                    <div class="search-box">
+                        <input id="search-box" type="text" placeholder="Type the word here" />
+                    </div>
+                    <!-- Search button -->
+                    <div class="search-button">
+                        <button class="search-button">
+                            <span class="search-text">Search</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="results" class="result-section">
+                    <p class="searched-word">Hello</p>
+                    <button class="sound-button">
+                        <span class="sound-text">Sound</span>
+                    </button>
+                </div>
+            </section>
+        </body>
         <footer class="footer">
             <P class="footer-text-mesh">Made with ❤️ by Mesh</P>
             <span class="footer-items">
