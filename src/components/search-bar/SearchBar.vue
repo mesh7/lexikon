@@ -1,11 +1,16 @@
 <script setup>
-import { ref } from "vue";
-
-const count = ref(0);
+import InputText from "primevue/inputtext";
 </script>
 
 <template>
-  <div>Search Bar</div>
+  <InputText class="searchBar" placeholder="Search" />
 </template>
 
-<style scoped></style>
+<style scoped>
+.searchBar {
+  width: 15rem;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  border-width: 2px;
+}
+</style>
