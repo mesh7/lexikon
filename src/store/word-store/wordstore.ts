@@ -9,6 +9,7 @@ export const useWordStore = defineStore('wordstore', () => {
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     try {
       const response = await axios.get(url);
+      console.log(response.data[0]);
       return response;
     } 
     catch(error) {

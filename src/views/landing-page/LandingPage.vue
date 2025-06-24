@@ -9,7 +9,7 @@ import { useWordStore } from "../../store/word-store/wordstore";
 const wordStore = useWordStore();
 
 onMounted(() => {
-  wordStore.getWordMeaning();
+  wordStore.getWordMeaning("Wonderful");
 });
 </script>
 
@@ -26,7 +26,7 @@ onMounted(() => {
       <template #title><h2 class="font-bold">Welcome</h2></template>
       <template #content>
         <p class="m-0">
-          {{ store.searchWord }}
+          {{ wordStore.searchWord }}
         </p>
       </template>
     </Card>
