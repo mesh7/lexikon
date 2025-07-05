@@ -9,13 +9,15 @@ export const useWordStore = defineStore('wordstore', () => {
 
   const searchResponse = ref({});
 
+  const displayRespone= ref();
+
   const getWordMeaning = async (word: string) => {
     searchWord.value = word;
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     try {
       const response = await axios.get(url);
       searchResponse.value = response.data[0];
-      console.log('response', response);
+      console.log('response', searchResponse.value);
       return;
     } 
     catch(error) {
