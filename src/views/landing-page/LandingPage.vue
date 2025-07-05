@@ -1,17 +1,22 @@
 <script setup>
 import { ref, onMounted } from "vue";
-// import SearchBar from "../../components/search-bar/SearchBar.vue";
+import SearchBar from "../../components/search-bar/SearchBar.vue";
 import Card from "primevue/card";
 import Button from "primevue/button";
 import Divider from "primevue/divider";
-import InputText from "primevue/inputtext";
 import ToggleSwitch from "primevue/toggleswitch";
 
 import { useWordStore } from "../../store/word-store/wordstore";
 
 const wordStore = useWordStore();
 
-const value = ref(null);
+const someBoolean = ref(false);
+const checked = ref(false);
+
+const dummy = () => {
+  someBoolean.value = !someBoolean.value;
+  document.documentElement.classList.toggle("dark");
+};
 
 // const sound = new Audio(wordStore.searchResponse.phonetics[2].audio);
 
@@ -29,10 +34,14 @@ onMounted(() => {
 
 <template>
   <section class="flex flex-col">
-    <div class="font-bold">Lexikon</div>
-    <ToggleSwitch v-model="checked" />
+    {{ checked }}
+    {{ someBoolean }}
+    <div class="flex justify-between">
+      <div class="font-bold">Lexikon</div>
+      <ToggleSwitch v-model="checked" @click="dummy" />
+    </div>
+    <SearchBar></SearchBar>
     <div class="flex items-end justify-between mt-8">
-      <InputText type="text" v-model="value" />
       <h1 class="font-bold text-8xl">{{ wordStore.searchWord }}</h1>
       <Button
         class="flex button-size"
