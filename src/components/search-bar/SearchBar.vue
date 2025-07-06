@@ -1,18 +1,43 @@
 <script setup>
-import InputText from "primevue/inputtext";
+import { storeToRefs } from "pinia";
+import Button from "primevue/button";
+// import InputText from "primevue/inputtext";
+import { useWordStore } from "../../store/word-store/wordstore";
+
+const wordStore = useWordStore();
+
+const { searchWord } = storeToRefs(wordStore);
+
+const getWordMeaning = () => {
+  searchWord.value = document.getElementById("search-word").value;
+  wordStore.getWordMeaning();
+};
 </script>
 
 <template>
-  <div class="input-container">
-    <input type="text" placeholder=" " id="name" required />
-    <label for="name">Search Word</label>
-  </div>
+  <section class="">
+    <div class="input-container flex justify-center">
+      <input type="text" placeholder=" " id="search-word" required />
+      <label for="name">Search Word</label>
+      <Button
+        label="Secondary"
+        severity="secondary"
+        size="large"
+        class="search-button ml-8"
+        rounded
+        @click="getWordMeaning"
+      >
+        <span class="pi pi-search" style="font-size: 2.5rem"></span>
+      </Button>
+      {{ searchWord }}
+    </div>
+  </section>
 </template>
 
 <style scoped>
 .input-container {
   position: relative;
-  width: 24rem;
+  width: 30rem;
   margin-top: 3rem;
 }
 
@@ -43,6 +68,8 @@ input:not(:placeholder-shown) + label {
   font-size: 12px;
   color: #0078d7;
 }
-</style>
 
-<!DOCTYPE html>
+.search-button {
+  width: 6rem;
+}
+</style>

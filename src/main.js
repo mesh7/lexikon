@@ -12,11 +12,7 @@ app.use(PrimeVue, {
   theme: {
     preset: Aura,
     options: {
-      darkModeSelector: ".dark", // Or your chosen selector
-      cssLayer: {
-        name: "primevue",
-        order: "theme, base, primevue",
-      },
+      darkModeSelector: ".dark",
     },
   },
 });

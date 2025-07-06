@@ -1,50 +1,42 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import SearchBar from "../../components/search-bar/SearchBar.vue";
+import { storeToRefs } from "pinia";
+
 import Card from "primevue/card";
 import Button from "primevue/button";
 import Divider from "primevue/divider";
 import ToggleSwitch from "primevue/toggleswitch";
+import SearchBar from "../../components/search-bar/SearchBar.vue";
 
 import { useWordStore } from "../../store/word-store/wordstore";
 
 const wordStore = useWordStore();
 
-const someBoolean = ref(false);
-const checked = ref(false);
+const { searchWord } = storeToRefs(wordStore);
 
-const dummy = () => {
-  someBoolean.value = !someBoolean.value;
+const toggleDarkMode = () => {
   document.documentElement.classList.toggle("dark");
 };
 
 // const sound = new Audio(wordStore.searchResponse.phonetics[2].audio);
-
 const playSound = () => {
   var sound = new Audio(wordStore.searchResponse.phonetics[2].audio);
   sound.play();
   // var a = new Audio(wordStore.searchResponse.phonetics[2].audio);
   // a.play();
 };
-
-onMounted(() => {
-  wordStore.getWordMeaning("Something");
-});
 </script>
 
 <template>
   <section class="flex flex-col">
-    {{ checked }}
-    {{ someBoolean }}
     <div class="flex justify-between">
       <div class="font-bold">Lexikon</div>
-      <ToggleSwitch v-model="checked" @click="dummy" />
+      <ToggleSwitch @click="toggleDarkMode" />
     </div>
     <SearchBar></SearchBar>
     <div class="flex items-end justify-between mt-8">
-      <h1 class="font-bold text-8xl">{{ wordStore.searchWord }}</h1>
+      <h1 class="font-bold text-8xl">{{ searchWord }}</h1>
       <Button
-        class="flex button-size"
+        class="flex w-3xs"
         label="Secondary"
         severity="secondary"
         size="large"
