@@ -29,7 +29,6 @@ const getWordMeaning = () => {
       >
         <span class="pi pi-search" style="font-size: 2.5rem"></span>
       </Button>
-      {{ searchWord }}
     </div>
   </section>
 </template>
@@ -66,7 +65,7 @@ input:focus + label,
 input:not(:placeholder-shown) + label {
   top: -20px;
   font-size: 12px;
-  color: #0078d7;
+  color: #909090;
 }
 
 .search-button {
