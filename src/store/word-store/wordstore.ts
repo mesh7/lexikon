@@ -11,6 +11,13 @@ export const useWordStore = defineStore('wordstore', () => {
 
   const displayRespone= ref();
 
+  const capitalizeFirstAlphabet = (word) => {
+    if (typeof word !== 'string') {
+      return word;
+    }
+    return word.charAt(0).toUpperCase();
+  };
+
   const getWordMeaning = async () => {
     // searchWord.value = word ;
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord.value}`;
