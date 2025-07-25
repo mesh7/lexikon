@@ -9,7 +9,8 @@ const wordStore = useWordStore();
 const { searchWord } = storeToRefs(wordStore);
 
 const getWordMeaning = () => {
-  searchWord.value = document.getElementById("search-word").value;
+  const inputWord = document.getElementById("search-word").value;
+  searchWord.value = wordStore.capitalizeFirstLetter(inputWord);
   wordStore.getWordMeaning();
 };
 </script>

@@ -11,11 +11,11 @@ export const useWordStore = defineStore('wordstore', () => {
 
   const displayRespone= ref();
 
-  const capitalizeFirstAlphabet = (word) => {
+  const capitalizeFirstLetter = (word) => {
     if (typeof word !== 'string') {
       return word;
     }
-    return word.charAt(0).toUpperCase();
+    return word.charAt(0).toUpperCase() + word.slice(1);
   };
 
   const getWordMeaning = async () => {
@@ -35,6 +35,7 @@ export const useWordStore = defineStore('wordstore', () => {
   return {
     searchWord,
     searchResponse,
+    capitalizeFirstLetter,
     getWordMeaning,
   }
 })

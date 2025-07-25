@@ -108,11 +108,37 @@ const playSound = () => {
       </template>
     </Card>
   </section>
+  <section>
+    <footer class="footer flex flex-col mt-auto pt-4 relative">
+      <P class="text-center">Made with ❤️ by Mesh</P>
+      <span class="flex justify-center">
+        <Button
+          severity="secondary"
+          label="Contact"
+          variant="link"
+          href="https://twitter.com/shubhammesh7"
+          rel="noopener noreferrer"
+        />
+        <Button
+          label="Support"
+          variant="link"
+          href="https://ko-fi.com/shubhammeshram"
+          rel="noopener noreferrer"
+        />
+      </span>
+    </footer>
+  </section>
 </template>
 
 <style scoped>
 .button-size {
   width: 14rem;
   height: 4rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
 }
 </style>
