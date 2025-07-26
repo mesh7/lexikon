@@ -109,7 +109,7 @@ const playSound = () => {
     </Card>
   </section>
   <section>
-    <footer class="footer flex flex-col mt-auto pt-4 relative">
+    <footer class="footer flex flex-col mt-auto pt-4 ">
       <P class="text-center">Made with ❤️ by Mesh</P>
       <span class="flex justify-center">
         <Button
