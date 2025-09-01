@@ -1,5 +1,7 @@
 # Lexikon - A clean online dictionary
 
-Do you want learn meaning of English words and tired of all the clutered dictionary websites? Solution is here!
+Do you want to learn the meaning of English words but are tired of cluttered dictionary websites? The solution is here!
 
-Lexicon allows you to search word meanings and show the all the information about the word in the most elegant way.
+Introducing Lexicon — A distraction-free platform designed to deliver word definitions with speed, clarity, and elegance. Built for users who value simplicity over clutter, Lexicon strips away unnecessary features to focus on what truly matters: understanding language.
+
+Lexicon lets you search for word meanings and presents all the relevant information in the most elegant and user-friendly way.
