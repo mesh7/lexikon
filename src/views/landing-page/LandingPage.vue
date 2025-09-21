@@ -17,12 +17,9 @@ const toggleDarkMode = () => {
   document.documentElement.classList.toggle("dark");
 };
 
-// const sound = new Audio(wordStore.searchResponse.phonetics[2].audio);
 const playSound = () => {
-  var sound = new Audio(wordStore.searchResponse.phonetics[2].audio);
+  let sound = new Audio(wordStore.searchResponse.phonetics[2].audio);
   sound.play();
-  // var a = new Audio(wordStore.searchResponse.phonetics[2].audio);
-  // a.play();
 };
 </script>
 
@@ -30,7 +27,7 @@ const playSound = () => {
   <section class="flex flex-col">
     <div class="flex justify-between">
       <div class="font-bold">Lexikon</div>
-      <ToggleSwitch @click="toggleDarkMode" />
+      <ToggleSwitch size="small" @click="toggleDarkMode" />
     </div>
     <SearchBar></SearchBar>
     <div class="flex items-end justify-between mt-8">
@@ -50,7 +47,7 @@ const playSound = () => {
     <Card class="my-8">
       <template #title>
         <p class="font-light">
-          {{ "noun" }}
+          <!-- {{ wordStore.searchResponse.phonetics[0].text }} -->
         </p>
       </template>
       <template #content>
@@ -66,50 +63,32 @@ const playSound = () => {
               {{ meaning.definitions[0].definition }}
             </p>
             <div class="flex mt-4">
-              <p class="mr-4 text-md font-semibold">Synonyms</p>
-              <p class="text-sm">
-                {{ meaning.definitions[0].definition.synonyms }}
-              </p>
+              <!-- <p class="mr-4 text-md font-semibold">{{ definition.definition }}</p> -->
+              <p class="text-sm"></p>
+              <div
+                v-for="definition in meaning.definitions"
+                :key="definition"
+                class="card flex"
+              >
+                <div>
+                  <p class="m-0 font-semibold text-lg">
+                    {{ "The utterance of such a greeting." }}
+                  </p>
+                  <p class="m-0">
+                    {{ definition.definition }}
+                  </p>
+                </div>
+                <Divider layout="vertical" />
+              </div>
             </div>
             <Divider />
-          </div>
-          <div class="card flex">
-            <div>
-              <p class="m-0 font-semibold text-lg">
-                {{ "The utterance of such a greeting." }}
-              </p>
-              <p class="m-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <Divider layout="vertical" />
-            <div>
-              <p class="m-0 font-semibold text-lg">
-                {{ "The utterance of such a greeting." }}
-              </p>
-              <p class="m-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-            <Divider layout="vertical" />
-            <div>
-              <p class="m-0 font-semibold text-lg">
-                {{ "The utterance of such a greeting." }}
-              </p>
-              <p class="m-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
           </div>
         </div>
       </template>
     </Card>
   </section>
   <section>
-    <footer class="footer flex flex-col mt-auto pt-4 ">
+    <footer class="flex flex-col mt-auto pt-4">
       <P class="text-center">Made with ❤️ by Mesh</P>
       <span class="flex justify-center">
         <Button
@@ -134,11 +113,5 @@ const playSound = () => {
 .button-size {
   width: 14rem;
   height: 4rem;
-}
-
-.footer {
-  position: fixed;
-  bottom: 2rem;
-  width: 100%;
 }
 </style>
