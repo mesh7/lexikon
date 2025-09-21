@@ -13,6 +13,7 @@ export const useWordStore = defineStore('wordstore', () => {
 
   const capitalizeFirstLetter = (word) => {
     if (typeof word !== 'string') {
+      console.log('dummy');
       return word;
     }
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
