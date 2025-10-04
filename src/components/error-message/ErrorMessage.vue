@@ -5,7 +5,7 @@ const count = ref(0);
 </script>
 
 <template>
-  <div>Error Message</div>
+  <div>Error Message Value</div>
 </template>
 
 <style scoped></style>
